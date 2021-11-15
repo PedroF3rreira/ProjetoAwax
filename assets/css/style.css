@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@100;400&display=swap');
+
+
+/*-----------------------------------
+|		variaveis globais			|
+-------------------------------------*/
+:root{
+	--font-color: #b98b59;
+	--bg-color: #000000;
+	--secundary-color: #d6c492;
+	--bd-color-ligth: #cfcfcf;
+	--bd-color-dark: #565656;
+}
+
+
+/*-----------------------------------
+|		reset de propiedades padroes |
+-------------------------------------*/
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Montserrat';
+	overflow-x: hidden;
+}
+
+/*-----------------------------------
+|		estilos de interface do site 
+-------------------------------------*/
+.button{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 10px;
+	background-color: var(--font-color);
+	color: #fff;
+	border-radius: 1.5em;
+	margin-top: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+.button:hover{
+	color: var(--secundary-color);
+}
+/*------------------------------------
+		estilo do cabeçalho da paginas|
+-------------------------------------*/
+header{
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	justify-content: center;
+	height: 100px;
+	background-color: var(--bg-color);
+	z-index: 999;
+}
+.container{
+	display: flex;
+	width: 1140px;
+}
+.row-header{
+	align-items: center;
+	height: 100px;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	color: #FFF;
+	width: 151px;
+	height: 100px;
+	padding-left: 10px;
+}
+.logo-img a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.logo-img p:first-child{
+	font-weight: bolder;
+	color: var(--font-color);
+	font-size: 25px;
+
+}
+.logo-img p:last-child{
+	font-size: 10px;
+	text-align: center;
+}
+
+
+/*------------------------------------
+		estilos do menu da pagina|
+-------------------------------------*/
+.menu{
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+.menu-mobile{
+	display: none;
+}
+.menu ul,
+.menu li{
+	list-style: none;
+}
+.menu ul{
+	display: flex;
+}
+.menu li a{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: 600;
+	margin-right: 12.5px;
+	margin-left: 12.5px;
+	text-transform: uppercase;
+	font-size: 13px;
+	height: 100px;
+	border-bottom: 5px solid transparent;
+	transition: border-bottom .3s linear;
+}
+
+.menu li a:hover,
+.menu .active a{
+	border-bottom: 5px solid var(--font-color);
+	color: var(--secundary-color);
+	transition: border-bottom .3s linear;
+	
+}
+
+
+/*------------------------------------------
+	--sessão do banner e sliders da pagina--
+------------------------------------------*/
+/*utilizando calc para adaptar a sessão banner preencher 
+#toda a altura da tele do dispositivo
+*/
+#banner{
+	height: 100vh;
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;/*Corta o slider*/
+}
+#banner .sliders{
+	width: 500vw;/* largura para 3 sliders */
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	transition: margin-left .5s linear;
+}
+#banner .slider{
+	display: inline-block;
+	width: 100vw;
+	height: 100%;
+	color: #fff;
+}
+#banner .slider-area{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-transform: uppercase;
+}
+
+#banner h1{
+	font-size: 53px;
+	color: #fff;
+}
+
+#banner span{
+	color: var(--font-color);
+}
+
+#banner h2{
+	font-size: 20px;
+}
+
+#banner .slider-ctrl{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	bottom: 20px;
+}
+
+#banner .slider-ctrl div{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid var(--font-color);
+	margin-right: 10px;
+	cursor: pointer;	
+}
+
+#banner .active-ctrl{
+	background-color: var(--font-color);
+}
+
+
+/*------------------------------------------
+	estilos de widgets do site
+------------------------------------------*/
+.default{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.default .section-title,
+.default .section-desc{
+	text-align: center;
+}
+
+.default .section-title,
+.default .section-desc{
+	text-transform: uppercase;
+}
+.default .section-title{
+	font-size: 22px;
+	font-weight: bold;
+}
+.default .section-desc{
+	color: #999;
+	font-size: 12px;
+	padding: 10px 0px 50px;
+
+}
+.default .section-body{
+	max-width: 1140px;
+	margin: auto;
+}
+
+/*------------------------------------------
+	tema dark e ligth dos widgets
+------------------------------------------*/
+
+.default.ligth{
+	background-color: #f7f7f7;
+}
+.default.ligth .section-title{
+	color: #000;
+}
+.default.dark{
+	background-color: #000;
+}
+.default.dark .section-title{
+	color: #fff;
+}
+
+
+/*------------------------------------------
+	estilos das sections especificas do site
+------------------------------------------*/
+
+/*------------------------------------------
+				ABOUT US
+------------------------------------------*/
+
+.section-about-us{
+	display: flex;
+	justify-content: center;	
+}
+.about-us-left{
+	flex: 1;
+	padding: 10px;
+}
+.about-us-left p{
+	font-size: 14px;
+	line-height: 23px;
+}
+.about-us-rigth{
+	width: 520px;
+	text-align: center;
+}
+.about-us-rigth img{
+	width: 480px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,.6);
+}
+
+/*------------------------------------------
+				SERVICES
+------------------------------------------*/
+
+.section-services{
+	display: flex;
+	
+}
+.service{;
+	flex: 1;
+	text-align: center;
+	border-left: 1px solid var(--bd-color-dark);
+}
+.service:last-child{
+	border-right: 1px solid var(--bd-color-dark);
+	padding: 10px;
+}
+.service h4{
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-top: 30px;
+	height: 60px;
+}
+.service p{
+	margin-top: 10px;
+	font-size: 10px;
+	color: #565656;
+}
+
+/*------------------------------------------
+			OUR PROJECTS
+------------------------------------------*/
+
+.our-projects{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.nav-our-projects{
+	display:inline-block ;
+	border: 1px solid var(--bd-color-ligth);
+	border-radius: 30px;
+	padding: 0px 10px;
+	background-color: #ededed;
+
+}
+
+.nav-our-projects ul,
+.nav-our-projects li{
+	list-style: none;
+}
+.nav-our-projects li{
+	display: inline-block;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 13px;
+	border-right: 1px solid var(--bd-color-ligth);
+	cursor: pointer;
+	font-weight: 300;
+	border-bottom: 3px solid transparent;
+}
+.nav-our-projects .active,
+.nav-our-projects li:hover{
+	border-bottom: 3px solid var(--font-color);
+}
+
+.nav-our-projects li:last-child{
+	border-right: 1px solid transparent;	
+}
+
+/*utilizar width e max-width
+ se o device for large ele para nos 1140px
+ se for small cobre toda tela
+*/
+.our-projects-photos{
+	width: 100vw;
+	max-width: 1140px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.our-projects-photo-area{
+	width: 260px;
+	margin: 10px;
+	cursor: pointer;
+}
+.our-projects-photo-area figure{
+	width: inherit;
+	height: 160px;
+	overflow-y: hidden;
+}
+.our-projects-photo-area img{
+	width: inherit;
+	height: inherit;
+}
+.our-projects-photo-area figcaption{
+	display: none;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	background-color: rgba(0,0,0,.6);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	padding: 10px;
+}
+.our-projects-photo-area figcaption h5{
+	font-weight: bolder;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.our-projects-photo-area figcaption p{
+	text-align: center;
+	line-height: 25px;
+	font-size: 13px;
+}
+.our-projects-photo-area:hover figcaption{
+	display: flex;
+}
+
+/*------------------------------------------
+	sessão de adaptação com media query
+------------------------------------------*/
+@media(max-width: 900px){
+	
+	.menu nav{
+		display: none;
+	}
+	.menu-mobile{
+		display: flex;
+		cursor: pointer;
+		margin-right: 20px;
+	}
+}
+
+@media(max-width: 700px){
+	.section-about-us{
+		flex-direction: column;
+	}
+	.about-us-left{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.about-us-rigth{
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		justify-content: center;
+	}
+	.about-us-rigth img{
+		width: 100%;
+	}
+
+}
