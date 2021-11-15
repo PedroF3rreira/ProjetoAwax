@@ -454,6 +454,24 @@ header{
 	height: 100%;
 	text-transform: uppercase;
 }
+.our-team-area .slider-ctrl{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 50px;
+}
+.our-team-area .slider-ctrl div{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid var(--font-color);
+	margin-right: 10px;
+	cursor: pointer;	
+}
+
+.our-team-area .active-ctrl{
+	background-color: var(--font-color);
+}
 
 /*------------------------------------------
 	sessão de adaptação com media query
