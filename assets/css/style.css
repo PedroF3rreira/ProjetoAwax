@@ -506,22 +506,22 @@ header{
 /*------------------------------------------
 		estilos da sessão happy clients
 ------------------------------------------*/
-.section-happy-clients{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
+
 .section-happy-clients .sliders{
+	display: inline-block;
 	width: 500vw;
 	height: 100%;
+	overflow: hidden;
 
 }
 .section-happy-clients .slider{
 	display: inline-block;
-	width: 90vw;
+	max-width: 1140px;/*utilizado para deixar slider centralizado*/
+	width: 100vw;
 	height: 100%;
 	text-align: center;
 }
+
 .section-happy-clients .slider-area{
 	display: flex;	
 	align-items: center;
@@ -574,15 +574,22 @@ header{
 .section-happy-clients .active-ctrl{
 	background-color: var(--font-color);
 }
+
+
+/*------------------------------------------
+		estilos da sessão companies
+------------------------------------------*/
+
 .companies{
-	margin-top: 50px;
 	display: flex;
 	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	box-shadow: 0em 0em .5em #888;
-	padding: 15px;
+	overflow-x: hidden;
 }
 .companies img{
-	margin-right: 30px;
+	margin: 50px;
 }
 
 /*------------------------------------------
