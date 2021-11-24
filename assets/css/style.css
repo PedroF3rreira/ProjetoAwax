@@ -662,7 +662,6 @@ header{
 	width: 500vw;/* largura para 3 sliders */
 	height: 100%;
 	transition: margin-left .5s linear;
-	overflow-x: hidden
 }
 .section-body-premium .slider{
 	display: inline-block;
@@ -686,20 +685,15 @@ header{
 .slider-area .desc{
 	width: 80%;
 	font-size: 15px;
-	
 }
 .slider-area .title{
 	display: flex;
-
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-.slider-area .title img{
-
-}
-
 .slider-area .desc h5{
 	font-size: 15px;
 	margin-left: 20px;
-	margin-bottom: 10px;
 	font-weight: 600;
 	text-transform: uppercase;
 }
@@ -716,7 +710,58 @@ header{
 }
 .slider-area .desc p:nth-child(n+3):nth-child(-n +5)::before{
 	content: "-";
+}
+.section-body-premium .slider-ctrl{
+	display: flex;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	align-items: flex-end;
+}
+.section-body-premium .slider-ctrl div{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid var(--font-color);
+	margin-right: 10px;
+	cursor: pointer;	
+}
+.section-body-premium .active-ctrl{
+	background-color: var(--font-color);
+}
 
+/*------------------------------------------
+	estilos da sessao some facts
+------------------------------------------*/
+.section-some-facts{
+	display: flex;
+}
+.section-some-facts .facts{
+	text-align: center;
+	flex: 1;
+}
+.section-some-facts .facts-title{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	color: var(--font-color);
+	padding: 10px;
+
+}
+.section-some-facts .facts-title::after{
+	content: "";
+	width: 30px;
+	height: 5px;
+	background-color: #888;
+	display: flex;
+	margin-top: 10px;
+}
+.section-some-facts h5{
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	min-height: 50px;
 }
 
 /*------------------------------------------
