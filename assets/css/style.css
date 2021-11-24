@@ -43,10 +43,10 @@
 	text-decoration: none;
 	
 }
-
 .button:hover{
 	color: var(--secundary-color);
 }
+
 /*------------------------------------
 		estilo do cabeçalho da paginas|
 -------------------------------------*/
@@ -153,6 +153,7 @@ header{
 	height: 100%;
 	background-color: rgba(0, 0, 0, .6);
 	transition: margin-left .5s linear;
+	overflow-x: hidden
 }
 #banner .slider{
 	display: inline-block;
@@ -622,18 +623,37 @@ header{
 .section-price .price h1{
 	font-size: 30px;
 }
-.section-price .price h1 p:nth-child(1){
+.section-price .price p:nth-child(3){
 	text-transform: uppercase;
 }
 .section-price .price p{
 	color: #888;
 }
-
-.section-price .price p::before{
+.section-price .price p::after{
 	content: "-";
 	display: block;
 }
-
+.section-price .price p:nth-child(8)::after{
+	content: "";
+}
+.button-price{
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 10px;
+	background-color: var(--bd-color-dark);
+	color: #fff;
+	border-radius: 1.5em;
+	margin-top: 30px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.button-price:hover{
+	background-color: var(--font-color);
+}
 /*------------------------------------------
 	sessão de adaptação com media query
 ------------------------------------------*/
