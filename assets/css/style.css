@@ -825,9 +825,9 @@ header{
 	display: flex;
 	justify-content: center;
 }
-
 .section-contact-us .form-group{
 	display: flex;
+	justify-content: center;
 }
 .form-group .form-input{
 	display: flex;
@@ -844,6 +844,7 @@ header{
 .form-input input{
 	border: transparent;
 	border-bottom: 1px solid #999;
+	background-color: #f7f7f7;
 }
 .form-input input:focus{
 	outline: none;
