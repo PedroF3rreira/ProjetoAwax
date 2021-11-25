@@ -765,6 +765,93 @@ header{
 }
 
 /*------------------------------------------
+	estilos social contact
+------------------------------------------*/
+
+.social-contacts{
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	margin-bottom: 20px;
+	box-shadow: 0em 0em .5em #888;
+	padding: 15px;
+	overflow-x: hidden;
+}
+.contacts{
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+.contacts-image{
+	display: flex;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	padding: 5px;
+}
+.contacts:first-child{
+	text-transform: uppercase;
+	color: #888;
+}
+.contacts p{
+	padding: 5px;
+	font-size: 10px;
+	color: #888;
+}
+.contacts:nth-child(2) .contacts-image{
+	background-color: #33c6f1;
+}
+.contacts:nth-child(3) .contacts-image{
+	background-color: #117bb5;
+}
+.contacts:nth-child(4) .contacts-image{
+	background-color: #336296;
+}
+.contacts:nth-child(5) .contacts-image{
+	background-color: #e84138;
+}
+.contacts img{
+	width: 100%;
+	object-fit: contain;
+}
+
+/*------------------------------------------
+	estilos da sessão contact us
+------------------------------------------*/
+
+.section-contact-us{
+	display: flex;
+	justify-content: center;
+}
+
+.section-contact-us .form-group{
+	display: flex;
+}
+.form-group .form-input{
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-right: 10px;
+	margin-bottom: 40px;
+}
+.form-input label{
+	color: #999;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+.form-input input{
+	border: transparent;
+	border-bottom: 1px solid #999;
+}
+.form-input input:focus{
+	outline: none;
+	border-bottom: 1px solid var(--font-color);
+}
+
+[type=submit]{
+	border: transparent;
+}
+/*------------------------------------------
 	sessão de adaptação com media query
 ------------------------------------------*/
 @media(max-width: 900px){
