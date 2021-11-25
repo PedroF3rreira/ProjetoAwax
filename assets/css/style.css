@@ -556,7 +556,8 @@ header{
 }
 .section-happy-clients .sliders .slider-ctrl{
 	display: flex;
-	width: 90vw;
+	max-width: 1140px;
+	width: 100vw;
 	position: absolute;
 	justify-content: center;
 	align-items: flex-end;
