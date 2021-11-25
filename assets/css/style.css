@@ -139,7 +139,7 @@ header{
 	--sessão do banner e sliders da pagina--
 ------------------------------------------*/
 /*utilizando calc para adaptar a sessão banner preencher 
-#toda a altura da tele do dispositivo
+#toda a altura da tela do dispositivo
 */
 #banner{
 	height: 100vh;
@@ -651,6 +651,7 @@ header{
 	margin-top: 30px;
 	cursor: pointer;
 	text-decoration: none;
+	margin-bottom: 10px;
 }
 .button-price:hover{
 	background-color: var(--font-color);
@@ -867,7 +868,7 @@ header{
 	}
 }
 
-@media(max-width: 700px){
+@media(max-width: 768px){
 	.section-about-us{
 		flex-direction: column;
 	}
