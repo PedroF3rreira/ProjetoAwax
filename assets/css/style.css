@@ -854,6 +854,86 @@ header{
 [type=submit]{
 	border: transparent;
 }
+
+/*------------------------------------------
+	estios da sessão map
+------------------------------------------*/
+
+.section-map{
+	background-image: url('../images/mapa.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.section-map-area{
+	width: 100vw;
+	max-width: 1140px;
+	margin: auto;
+}
+.section-map-info{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 50%;
+	padding-left: 40px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0em 0em 1em #999;
+}
+.section-map-item{
+	display: flex;
+	align-items: center;
+	color: #999;
+	margin-bottom: 10px;
+}
+.item-img{
+	display: inline-flex;
+	width: 30px;
+	height: 30px;
+	padding: 7px;
+	border-radius: 15px;
+	background-color: #999;
+	margin-right: 20px;
+}
+.item-img img{
+	width: 100%;
+	object-fit: contain;
+}
+
+/*------------------------------------------
+		estilos do rodape
+------------------------------------------*/
+footer{
+	display: flex;
+	justify-content: center;
+	background-color: var(--bg-color);
+	color: #fff;
+}
+.footer-area{
+	display: flex;
+	justify-content: center;
+	width: 1140px;
+	margin-top: 30px;
+}
+.footer-item{
+	flex: 1;
+}
+.footer-image-area{
+	display: flex;
+}
+.footer-image{
+	display: flex;
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	background-color: #373737;
+	padding: 5px;
+	margin-right: 10px;
+}
+.footer-image img{
+	width: 100%;
+	object-fit: contain;
+}
 /*------------------------------------------
 	sessão de adaptação com media query
 ------------------------------------------*/
