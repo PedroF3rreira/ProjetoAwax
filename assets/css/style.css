@@ -16,6 +16,9 @@
 /*-----------------------------------
 |		reset de propiedades padroes |
 -------------------------------------*/
+html,body{
+	overflow-x: hidden;
+}
 *{
 	box-sizing: border-box;
 	padding: 0px;
@@ -153,7 +156,8 @@ header{
 	height: 100%;
 	background-color: rgba(0, 0, 0, .6);
 	transition: margin-left .5s linear;
-	overflow-x: hidden
+	overflow: hidden;
+	
 }
 #banner .slider{
 	display: inline-block;
@@ -582,8 +586,8 @@ header{
 ------------------------------------------*/
 
 .companies{
-	display: flex;
-	width: 100vw;
+	display: inline-block;
+	width: 500vw;
 	justify-content: center;
 	margin-top: 50px;
 	margin-bottom: 20px;
@@ -601,6 +605,7 @@ header{
 ------------------------------------------*/
 .section-price{
 	display: flex;
+	width: 100%;
 	justify-content: center;
 }
 .section-price .price{
@@ -777,7 +782,6 @@ header{
 	margin-bottom: 20px;
 	box-shadow: 0em 0em .5em #888;
 	padding: 15px;
-	overflow-x: hidden;
 }
 .contacts{
 	display: flex;
@@ -999,6 +1003,9 @@ footer{
 	.about-us-rigth img{
 		width: 100%;
 	}
+	.section-services{
+		flex-direction: column;
+	}
 
 	.section-happy-clients .slider{
 		width: 100vw;
@@ -1007,5 +1014,52 @@ footer{
 	.section-happy-clients .sliders .slider-ctrl{
 		margin-top: 50px;
 	}
-
+	.section-our-team{
+		max-width: 680px
+	}
+	.section-some-facts{
+		flex-direction: column;
+	}
+	.section-some-facts h5{
+		margin-bottom: 0px;
+	}
+	.section-some-facts p{
+		margin-bottom: 15px;
+	}
+	.section-map-info{
+		width: 100%;
+		padding-right: 10px;
+	}
+	.footer-area{
+		display: block;
+	}
+	.footer-image-area{
+		margin-bottom: 30px;
+	}
+	.footer-item{
+		padding: 15px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+}
+@media(max-width: 425px){
+	#banner .slider-area h1{
+		font-size: 30px;
+	}
+	.section-our-team{
+		max-width: 330px
+	}
+	.section-price{
+		flex-wrap: wrap;
+	}
+	.section-price .price{
+		margin-left: 30px;
+		margin-bottom: 20px;
+	}
+	.section-body-premium .slider .slider-area{
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+	}
+			
 }
