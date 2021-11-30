@@ -55,13 +55,9 @@ html,body{
 -------------------------------------*/
 header{
 	display: flex;
-	width: 100%;
-	position: fixed;
-	top: 0px;
 	justify-content: center;
 	height: 100px;
 	background-color: var(--bg-color);
-	z-index: 999;
 }
 .container{
 	display: flex;
@@ -293,7 +289,6 @@ header{
 
 .section-services{
 	display: flex;
-	
 }
 .service{;
 	flex: 1;
@@ -587,7 +582,7 @@ header{
 
 .companies{
 	display: inline-block;
-	width: 500vw;
+	width: 300vw;
 	justify-content: center;
 	margin-top: 50px;
 	margin-bottom: 20px;
@@ -972,19 +967,47 @@ footer{
 /*------------------------------------------
 	sessão de adaptação com media query
 ------------------------------------------*/
-@media(max-width: 900px){
+/*condiçao que altera layout da tela tela tem de ser maior que 450px e menor que 800px*/
+@media(min-width: 450px) and (max-width: 800px){
 	
-	.menu nav{
-		display: none;
-	}
 	.menu-mobile{
-		display: flex;
+		display: block;
+		padding-right: 50px;
 		cursor: pointer;
-		margin-right: 20px;
+		border: 0;
 	}
-}
+	.menu nav{
+		position: absolute;
+		right: 0;
+		top: 100px;
+		width: 70%;
+		background-color: rgba(0,0,0,.8);
+		z-index: 99;
+		height: 100vh;
+	}
+	
+	.menu .active a,
+	.menu li a:hover{
+		border: 0;
+	}
+	
+	.menu ul{
+		flex-direction: column;
+	}
+	
+	.menu nav ul li{
+		border-bottom: 0px;
+	}
+	
+	.menu nav ul li a{
+		font-weight: bolder;
+		font-size: 25px;
+		border: 0;
+		height: 60px;
+		margin-left: 100px;
+		margin-right: 0;
 
-@media(max-width: 768px){
+	}
 	.section-about-us{
 		flex-direction: column;
 	}
@@ -1003,13 +1026,16 @@ footer{
 	.about-us-rigth img{
 		width: 100%;
 	}
+	
 	.section-services{
-		flex-direction: column;
+		flex-wrap: wrap;
 	}
-
+	.section-services .service{
+		min-width: 50%;
+		border: 0px;
+	}
 	.section-happy-clients .slider{
 		width: 100vw;
-		
 	}
 	.section-happy-clients .sliders .slider-ctrl{
 		margin-top: 50px;
@@ -1018,7 +1044,7 @@ footer{
 		max-width: 680px
 	}
 	.section-some-facts{
-		flex-direction: column;
+		flex-wrap: wrap;
 	}
 	.section-some-facts h5{
 		margin-bottom: 0px;
@@ -1026,9 +1052,18 @@ footer{
 	.section-some-facts p{
 		margin-bottom: 15px;
 	}
+	.section-some-facts .facts{
+		min-width: 50%;
+	}
 	.section-map-info{
 		width: 100%;
+		margin: auto;
+		font-size: 25px;
 		padding-right: 10px;
+	}
+	.section-map-info .item-img{
+		width: 50px;
+		height: 50px;
 	}
 	.footer-area{
 		display: block;
@@ -1042,24 +1077,180 @@ footer{
 		margin-top: 30px;
 	}
 }
-@media(max-width: 425px){
-	#banner .slider-area h1{
-		font-size: 30px;
+
+@media(max-width: 450px){
+	.menu-mobile{
+		display: block;
+		padding-right: 50px;
+		cursor: pointer;
+		border: 0;
 	}
-	.section-our-team{
-		max-width: 330px
+	.menu nav{
+		position: absolute;
+		right: 0;
+		top: 100px;
+		width: 70%;
+		background-color: rgba(0,0,0,.8);
+		z-index: 99;
+		height: 100vh;
 	}
-	.section-price{
-		flex-wrap: wrap;
+	
+	.menu .active a,
+	.menu li a:hover{
+		border: 0;
 	}
-	.section-price .price{
-		margin-left: 30px;
-		margin-bottom: 20px;
+	
+	.menu ul{
+		flex-direction: column;
 	}
-	.section-body-premium .slider .slider-area{
+	
+	.menu nav ul li{
+		border-bottom: 0px;
+	}
+	
+	.menu nav ul li a{
+		font-weight: bolder;
+		font-size: 15px;
+		border: 0;
+		height: 40px;
+		margin-left: 100px;
+		margin-right: 0;
+	}
+	
+	#banner .slider h1{
+		font-size: 20px;
+	}
+	
+	.section-about-us{
+		flex-direction: column;
+	}
+	
+	.about-us-left{
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+
+	}
+	
+	.about-us-rigth{
+		display: flex;
+		width: 100%;
+		padding: 10px;
+		justify-content: center;
+	}
+	
+	.about-us-rigth img{
+		width: 80%;
+	}
+
+	.section-services{
+		flex-direction: column;
+	}
+	
+	.service{
+		border: 0;
+	}
+
+	.our-projects .nav-our-projects{
+		border: 0;
+	}
+
+	.our-projects .nav-our-projects ul{
+		display: flex;
+		flex-direction: column;
+
+	}	
+
+	.our-projects .nav-our-projects ul li{
+		border: 0;
+	}
+
+	.section-happy-clients .slider{
+		width: 100vw;
+	}
+	
+	.section-happy-clients .sliders .slider-ctrl{
+		margin-top: 50px;
+	}
+	.section-price{
+		flex-direction: column;
+		align-items: center;
+		margin-left: 20px;
+	}
+	
+	.section-price .price:first-child{
+		margin-left: 0px;
+	}	
+	
+	.section-price .price{
+		margin-bottom: 20px;
+	}
+	
+	.section-our-team{
+		max-width: 340px
+	}
+	
+	.section-body-premium .slider .slider-area{
+		flex-direction: column;
+		align-items: center;
+		padding-right: 10px;
+	}
+
+	.section-some-facts{
+		flex-direction: column;
+	}
+	
+	.section-some-facts h5{
+		margin-bottom: 0px;
+	}
+	
+	.section-some-facts p{
+		margin-bottom: 15px;
+	}
+	
+	.section-some-facts .facts{
+		min-width: 50%;
+	}
+	
+	form{
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+	}
+	
+	.social-contacts{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.social-contacts .contacts{
+		margin-top: 20px;
+	}
+
+	.section-map-info{
+		width: 100%;
+		margin: auto;
+		font-size: 15px;
+		padding-right: 10px;
+	}
+	
+	.section-map-info .item-img{
+		width: 30px;
+		height: 30px;
+	}
+	
+	.footer-area{
+		display: block;
+	}
+	
+	.footer-image-area{
+		margin-bottom: 30px;
+	}
+	
+	.footer-item{
 		padding: 15px;
+		margin-bottom: 30px;
+		margin-top: 30px;
 	}
 			
 }
