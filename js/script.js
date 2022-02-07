@@ -40,5 +40,20 @@ function scrollLigth() {
 	})
 	
 }
+function mobileMenu() {
+	document.querySelector('.menu-mobile').addEventListener('click', el => {
+		
+		let menu = document.querySelector('nav').style.display;
+		
+		if(menu == 'flex'){
+			document.querySelector('nav').style.display = 'none';
+		}
+		else{
+			document.querySelector('nav').style.display = 'flex';	
+		}
+
+	});
+}
+mobileMenu();
 sliderShow();
 scrollLigth()

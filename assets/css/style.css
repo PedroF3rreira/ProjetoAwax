@@ -977,6 +977,7 @@ footer{
 		border: 0;
 	}
 	.menu nav{
+		display: none;
 		position: absolute;
 		right: 0;
 		top: 100px;
@@ -1086,6 +1087,7 @@ footer{
 		border: 0;
 	}
 	.menu nav{
+		display: none;
 		position: absolute;
 		right: 0;
 		top: 100px;
